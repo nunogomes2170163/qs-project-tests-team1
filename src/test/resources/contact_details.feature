@@ -1,13 +1,16 @@
 Feature: Contact Details
 
+  #joao
   Scenario: Contact details screen valid GUID
     Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb"
     Then the page sub title should be "CONTACT INFORMATION"
 
+    #david
   Scenario: Contact details screen invalid GUID
     Given the user is on the contact details page of the user with GUID "000-invalid-000"
     Then the page should present a "Connection Failure" message
 
+    #nuno
   Scenario: Contact details info
     Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb"
     Then the "name" field should be filled with "Joao"
@@ -21,11 +24,13 @@ Feature: Contact Details
     And the "phone" field should be filled with "244534398"
     And the "photourl" field should be filled with "https://randomuser.me/api/portraits/men/19.jpg"
 
+    #joao
   Scenario: Contact details screen back option
     Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb"
     When the user clicks on the "Back" button
     Then the "Contacts List" screen should be displayed
 
+    #david
   Scenario: Contact details screen image url
     Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb"
     When the user clicks on the image url
