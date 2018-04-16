@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 public class StepDefsContactsList {
     private WebDriver driver;
 
-    @Given("^I am on the Contacts List page$")
+    @Given("^the user is on localhost:8080$")
     public void iAmOnTheContactsListPage() throws Throwable {
         driver.get("http://localhost:8080");
         assertEquals("Contacts Orchestrator Solution", driver.getTitle());
