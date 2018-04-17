@@ -7,6 +7,7 @@ import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -33,14 +34,28 @@ public class US1StepsDef {
         wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.tagName("body")),text));
     }
 
+    @Then("^the sub title of the page should be \"([^\"]*)\"$")
+    public void theSubTitleOfThePageShouldBe(String subTittle) throws Throwable {
+        ExpectedConditions.textToBePresentInElement(driver.findElement(By.cssSelector(".sub-title")),subTittle);
+    }
+
+    @And("^the contact list should show (\\d+) results$")
+    public void theContactListShouldShowResults(int results) throws Throwable {
+        int rowsCount = driver.findElements(By.xpath("//table[@id='contacts']/tbody/tr")).size();
+        assertEquals(rowsCount, results);
+    }
+
     @Before
     public void setUp() {
-        driver = new HtmlUnitDriver();
+        System.setProperty("phantomjs.binary.path",
+                "drivers\\phantomjs.exe");
+        driver = new PhantomJSDriver();
     }
 
     @After
     public void tearDown() {
         driver.close();
     }
+
 
 }
