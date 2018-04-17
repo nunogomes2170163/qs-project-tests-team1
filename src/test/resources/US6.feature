@@ -1,16 +1,26 @@
-Feature: Contact Details
+Feature: Access to a Contact Orchestrator Solution's (COS) Details Page
+  As a user
+  I want to access to the information of a contact presented on a details page
+  So that I can see the details of the contact selected
 
-  #joao
+    #Nuno
+  Scenario: Click on contact details
+    Given the user is on contacts list
+    When the user clicks on the "Open" option of the first result
+    Then the first result contact details page should be displayed
+    And the GUID and Name fields should match the first list result on the contacts list screen
+
+    #Joao
   Scenario: Contact details screen valid GUID
     Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb"
     Then the page sub title should be "CONTACT INFORMATION"
 
-    #david
+    #David
   Scenario: Contact details screen invalid GUID
     Given the user is on the contact details page of the user with GUID "000-invalid-000"
     Then the page should present a "Connection Failure" message
 
-    #nuno
+    #Nuno
   Scenario: Contact details info
     Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb"
     Then the "name" field should be filled with "Joao"
@@ -22,16 +32,4 @@ Feature: Contact Details
     And the "company" field should be filled with "W. Bell and Co."
     And the "email" field should be filled with "JoaoRibeiroSantos@teleworm.us"
     And the "phone" field should be filled with "244534398"
-    And the "photourl" field should be filled with "https://randomuser.me/api/portraits/men/19.jpg"
-
-    #joao
-  Scenario: Contact details screen back option
-    Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb"
-    When the user clicks on the "Back" button
-    Then the "Contacts List" screen should be displayed
-
-    #david
-  Scenario: Contact details screen image url
-    Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb"
-    When the user clicks on the image url
-    Then a new page with only an img tag must be displayed
+    And the a profile photo should be displayed
