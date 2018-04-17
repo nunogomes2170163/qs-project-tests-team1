@@ -36,7 +36,8 @@ public class US1StepsDef {
 
     @Then("^the sub title of the page should be \"([^\"]*)\"$")
     public void theSubTitleOfThePageShouldBe(String subTittle) throws Throwable {
-        ExpectedConditions.textToBePresentInElement(driver.findElement(By.cssSelector(".sub-title")),subTittle);
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.cssSelector(".sub-title")),subTittle));
     }
 
     @And("^the contact list should show (\\d+) results$")
@@ -54,7 +55,7 @@ public class US1StepsDef {
 
     @After
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
 
 

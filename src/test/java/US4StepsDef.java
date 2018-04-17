@@ -29,7 +29,7 @@ public class US4StepsDef {
 
     @After
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
 
 

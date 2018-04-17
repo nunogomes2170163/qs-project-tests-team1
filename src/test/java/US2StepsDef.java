@@ -29,7 +29,7 @@ public class US2StepsDef {
 
     @After
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
 
 
@@ -43,12 +43,12 @@ public class US2StepsDef {
 
     @Then("^the list should display the \"([^\"]*)\" message$")
     public void theListShouldDisplayTheMessage(String results) throws Throwable {
-        assertEquals(driver.findElement(By.xpath("//table[@id='contacts']/tbody/tr/td")),results);
+        assertEquals(driver.findElement(By.xpath("//table[@id='contacts']/tbody/tr/td")).getText(),results);
     }
 
 
     @And("^the number of results message should be \"([^\"]*)\"$")
     public void theNumberOfResultsMessageShouldBe(String resultsInfo) throws Throwable {
-        assertEquals(driver.findElement(By.xpath("//div[@id='contacts_info']")),resultsInfo);
+        assertEquals(driver.findElement(By.xpath("//div[@id='contacts_info']")).getText(),resultsInfo);
     }
 }
