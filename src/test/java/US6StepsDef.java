@@ -33,7 +33,7 @@ public class US6StepsDef {
         driver.get("http://35.190.213.163/qs-project-team1/get_contact.php?guid='" + guid);
         if (!guid.equals("000-invalid-000")) {
             WebDriverWait wait = new WebDriverWait(driver, 3);
-            wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//p")), guid));
+            wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//p[@name='guid']")), guid));
         }
     }
 

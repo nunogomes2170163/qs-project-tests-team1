@@ -1289,3 +1289,592 @@ formatter.feature({
   "id": "access-to-a-contact-orchestrator-solution\u0027s-(cos)-details-page",
   "keyword": "Feature"
 });
+formatter.before({
+  "duration": 2989608682,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1612014910,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2717092852,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3528630188,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3114837286,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3085933047,
+  "status": "passed"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 6,
+      "value": "#Nuno"
+    }
+  ],
+  "line": 7,
+  "name": "Click on contact details",
+  "description": "",
+  "id": "access-to-a-contact-orchestrator-solution\u0027s-(cos)-details-page;click-on-contact-details",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 8,
+  "name": "the user is on contacts list",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 9,
+  "name": "the user clicks on the \"Open\" option of the first result",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 10,
+  "name": "the first result contact details page should be displayed",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 11,
+  "name": "the GUID and Name fields should match the first list result on the contacts list screen",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.after({
+  "duration": 540873673,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 73848558,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 77925952,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 82110194,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 534455088,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 82926330,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3286816063,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2245527941,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3276635525,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3189399506,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3047111563,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3959356982,
+  "status": "passed"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 13,
+      "value": "#Joao"
+    }
+  ],
+  "line": 14,
+  "name": "Contact details screen valid GUID",
+  "description": "",
+  "id": "access-to-a-contact-orchestrator-solution\u0027s-(cos)-details-page;contact-details-screen-valid-guid",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 15,
+  "name": "the user is on the contact details page of the user with GUID \"021a1dc3-5b75-4868-bb03-333170ce9acb\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 16,
+  "name": "the page sub title should be \"CONTACT INFORMATION\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "021a1dc3-5b75-4868-bb03-333170ce9acb",
+      "offset": 63
+    }
+  ],
+  "location": "US6StepsDef.theUserIsOnTheContactDetailsPageOfTheUserWithGUID(String)"
+});
+formatter.result({
+  "duration": 902545882,
+  "error_message": "org.openqa.selenium.NoSuchElementException: {\"errorMessage\":\"Unable to find element with xpath \u0027//p\u0027\",\"request\":{\"headers\":{\"Accept-Encoding\":\"gzip\",\"Connection\":\"Keep-Alive\",\"Content-Length\":\"31\",\"Content-Type\":\"application/json; charset\u003dutf-8\",\"Host\":\"localhost:25341\",\"User-Agent\":\"okhttp/3.9.1\"},\"httpVersion\":\"1.1\",\"method\":\"POST\",\"post\":\"{\\\"using\\\":\\\"xpath\\\",\\\"value\\\":\\\"//p\\\"}\",\"url\":\"/element\",\"urlParsed\":{\"anchor\":\"\",\"query\":\"\",\"file\":\"element\",\"directory\":\"/\",\"path\":\"/element\",\"relative\":\"/element\",\"port\":\"\",\"host\":\"\",\"password\":\"\",\"user\":\"\",\"userInfo\":\"\",\"authority\":\"\",\"protocol\":\"\",\"source\":\"/element\",\"queryKey\":{},\"chunks\":[\"element\"]},\"urlOriginal\":\"/session/478f3870-4277-11e8-b61b-f95d153781c0/element\"}}\nCommand duration or timeout: 0 milliseconds\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSCommandExecutor.execute(PhantomJSCommandExecutor.java:82)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)\r\n\tat US6StepsDef.theUserIsOnTheContactDetailsPageOfTheUserWithGUID(US6StepsDef.java:36)\r\n\tat ✽.Given the user is on the contact details page of the user with GUID \"021a1dc3-5b75-4868-bb03-333170ce9acb\"(US6.feature:15)\r\nCaused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:140)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSCommandExecutor.execute(PhantomJSCommandExecutor.java:82)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)\r\n\tat US6StepsDef.theUserIsOnTheContactDetailsPageOfTheUserWithGUID(US6StepsDef.java:36)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)\r\nCaused by: org.openqa.selenium.NoSuchElementException: {\"errorMessage\":\"Unable to find element with xpath \u0027//p\u0027\",\"request\":{\"headers\":{\"Accept-Encoding\":\"gzip\",\"Connection\":\"Keep-Alive\",\"Content-Length\":\"31\",\"Content-Type\":\"application/json; charset\u003dutf-8\",\"Host\":\"localhost:25341\",\"User-Agent\":\"okhttp/3.9.1\"},\"httpVersion\":\"1.1\",\"method\":\"POST\",\"post\":\"{\\\"using\\\":\\\"xpath\\\",\\\"value\\\":\\\"//p\\\"}\",\"url\":\"/element\",\"urlParsed\":{\"anchor\":\"\",\"query\":\"\",\"file\":\"element\",\"directory\":\"/\",\"path\":\"/element\",\"relative\":\"/element\",\"port\":\"\",\"host\":\"\",\"password\":\"\",\"user\":\"\",\"userInfo\":\"\",\"authority\":\"\",\"protocol\":\"\",\"source\":\"/element\",\"queryKey\":{},\"chunks\":[\"element\"]},\"urlOriginal\":\"/session/478f3870-4277-11e8-b61b-f95d153781c0/element\"}}\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027LAPTOP-HLMLFPV4\u0027, ip: \u0027192.168.56.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_151\u0027\nDriver info: driver.version: unknown\r\n",
+  "status": "failed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "CONTACT INFORMATION",
+      "offset": 30
+    }
+  ],
+  "location": "US6StepsDef.thePageSubTitleShouldBe(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.after({
+  "duration": 82617817,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 518852977,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 74826608,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 534964169,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 94915639,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 93210069,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3321243253,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2211684590,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2583579274,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3485106263,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3561508982,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3227296547,
+  "status": "passed"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 18,
+      "value": "#David"
+    }
+  ],
+  "line": 19,
+  "name": "Contact details screen invalid GUID",
+  "description": "",
+  "id": "access-to-a-contact-orchestrator-solution\u0027s-(cos)-details-page;contact-details-screen-invalid-guid",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 20,
+  "name": "the user is on the contact details page of the user with GUID \"000-invalid-000\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 21,
+  "name": "the page should present a \"Connection Failure\" message",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "000-invalid-000",
+      "offset": 63
+    }
+  ],
+  "location": "US6StepsDef.theUserIsOnTheContactDetailsPageOfTheUserWithGUID(String)"
+});
+formatter.result({
+  "duration": 687440673,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Connection Failure",
+      "offset": 27
+    }
+  ],
+  "location": "US6StepsDef.thePageShouldPresentAMessage(String)"
+});
+formatter.result({
+  "duration": 78955785,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 522676559,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 91463292,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 66754966,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 82321704,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 77669952,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 67419762,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2290425583,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1605189350,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2612032413,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3065865532,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3120188477,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3866387596,
+  "status": "passed"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 23,
+      "value": "#Nuno"
+    }
+  ],
+  "line": 24,
+  "name": "Contact details info",
+  "description": "",
+  "id": "access-to-a-contact-orchestrator-solution\u0027s-(cos)-details-page;contact-details-info",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 25,
+  "name": "the user is on the contact details page of the user with GUID \"021a1dc3-5b75-4868-bb03-333170ce9acb\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 26,
+  "name": "the \"name\" field should be filled with \"Joao\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 27,
+  "name": "the \"surname\" field should be filled with \"Santos\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 28,
+  "name": "the \"occupation\" field should be filled with \"School social worker\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 29,
+  "name": "the \"street address\" field should be filled with \"R Afonso Albuquerque 27\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 30,
+  "name": "the \"birthday\" field should be filled with \"3/31/1986\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "the \"city\" field should be filled with \"Fonte Cova\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 32,
+  "name": "the \"company\" field should be filled with \"W. Bell and Co.\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "the \"email\" field should be filled with \"JoaoRibeiroSantos@teleworm.us\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 34,
+  "name": "the \"phone\" field should be filled with \"244534398\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "the a profile photo should be displayed",
+  "keyword": "And "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "021a1dc3-5b75-4868-bb03-333170ce9acb",
+      "offset": 63
+    }
+  ],
+  "location": "US6StepsDef.theUserIsOnTheContactDetailsPageOfTheUserWithGUID(String)"
+});
+formatter.result({
+  "duration": 797219233,
+  "error_message": "org.openqa.selenium.NoSuchElementException: {\"errorMessage\":\"Unable to find element with xpath \u0027//p\u0027\",\"request\":{\"headers\":{\"Accept-Encoding\":\"gzip\",\"Connection\":\"Keep-Alive\",\"Content-Length\":\"31\",\"Content-Type\":\"application/json; charset\u003dutf-8\",\"Host\":\"localhost:12901\",\"User-Agent\":\"okhttp/3.9.1\"},\"httpVersion\":\"1.1\",\"method\":\"POST\",\"post\":\"{\\\"using\\\":\\\"xpath\\\",\\\"value\\\":\\\"//p\\\"}\",\"url\":\"/element\",\"urlParsed\":{\"anchor\":\"\",\"query\":\"\",\"file\":\"element\",\"directory\":\"/\",\"path\":\"/element\",\"relative\":\"/element\",\"port\":\"\",\"host\":\"\",\"password\":\"\",\"user\":\"\",\"userInfo\":\"\",\"authority\":\"\",\"protocol\":\"\",\"source\":\"/element\",\"queryKey\":{},\"chunks\":[\"element\"]},\"urlOriginal\":\"/session/5eda0cd0-4277-11e8-8a36-5f43c3c4bbd8/element\"}}\nCommand duration or timeout: 0 milliseconds\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSCommandExecutor.execute(PhantomJSCommandExecutor.java:82)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)\r\n\tat US6StepsDef.theUserIsOnTheContactDetailsPageOfTheUserWithGUID(US6StepsDef.java:36)\r\n\tat ✽.Given the user is on the contact details page of the user with GUID \"021a1dc3-5b75-4868-bb03-333170ce9acb\"(US6.feature:25)\r\nCaused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:140)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSCommandExecutor.execute(PhantomJSCommandExecutor.java:82)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)\r\n\tat US6StepsDef.theUserIsOnTheContactDetailsPageOfTheUserWithGUID(US6StepsDef.java:36)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)\r\nCaused by: org.openqa.selenium.NoSuchElementException: {\"errorMessage\":\"Unable to find element with xpath \u0027//p\u0027\",\"request\":{\"headers\":{\"Accept-Encoding\":\"gzip\",\"Connection\":\"Keep-Alive\",\"Content-Length\":\"31\",\"Content-Type\":\"application/json; charset\u003dutf-8\",\"Host\":\"localhost:12901\",\"User-Agent\":\"okhttp/3.9.1\"},\"httpVersion\":\"1.1\",\"method\":\"POST\",\"post\":\"{\\\"using\\\":\\\"xpath\\\",\\\"value\\\":\\\"//p\\\"}\",\"url\":\"/element\",\"urlParsed\":{\"anchor\":\"\",\"query\":\"\",\"file\":\"element\",\"directory\":\"/\",\"path\":\"/element\",\"relative\":\"/element\",\"port\":\"\",\"host\":\"\",\"password\":\"\",\"user\":\"\",\"userInfo\":\"\",\"authority\":\"\",\"protocol\":\"\",\"source\":\"/element\",\"queryKey\":{},\"chunks\":[\"element\"]},\"urlOriginal\":\"/session/5eda0cd0-4277-11e8-8a36-5f43c3c4bbd8/element\"}}\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027LAPTOP-HLMLFPV4\u0027, ip: \u0027192.168.56.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_151\u0027\nDriver info: driver.version: unknown\r\n",
+  "status": "failed"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.after({
+  "duration": 66417644,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 80081890,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 71211982,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 91480432,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 66349451,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 71787435,
+  "status": "passed"
+});
+formatter.uri("US7.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Return to the Contacts Orchestrator Solution\u0027s (COS) Landing Page after checking a details page",
+  "description": "As a user\r\nI want to return to the landing page after checking a details page\r\nSo that I go back to the page where the list of the contacts available are presented",
+  "id": "return-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page-after-checking-a-details-page",
+  "keyword": "Feature"
+});
+formatter.before({
+  "duration": 2724473077,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2267566870,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2604806445,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2615645945,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3551245299,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2730755275,
+  "status": "passed"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 6,
+      "value": "#Joao"
+    }
+  ],
+  "line": 7,
+  "name": "Return to COS landing page from a details page",
+  "description": "",
+  "id": "return-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page-after-checking-a-details-page;return-to-cos-landing-page-from-a-details-page",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 8,
+  "name": "the user is on the contact details page of the user with GUID \"021a1dc3-5b75-4868-bb03-333170ce9acb\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 9,
+  "name": "the user clicks on the \"Back\" button",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 10,
+  "name": "the \"CONTACTS LIST\" screen should be displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "021a1dc3-5b75-4868-bb03-333170ce9acb",
+      "offset": 63
+    }
+  ],
+  "location": "US6StepsDef.theUserIsOnTheContactDetailsPageOfTheUserWithGUID(String)"
+});
+formatter.result({
+  "duration": 702239047,
+  "error_message": "org.openqa.selenium.NoSuchElementException: {\"errorMessage\":\"Unable to find element with xpath \u0027//p\u0027\",\"request\":{\"headers\":{\"Accept-Encoding\":\"gzip\",\"Connection\":\"Keep-Alive\",\"Content-Length\":\"31\",\"Content-Type\":\"application/json; charset\u003dutf-8\",\"Host\":\"localhost:37614\",\"User-Agent\":\"okhttp/3.9.1\"},\"httpVersion\":\"1.1\",\"method\":\"POST\",\"post\":\"{\\\"using\\\":\\\"xpath\\\",\\\"value\\\":\\\"//p\\\"}\",\"url\":\"/element\",\"urlParsed\":{\"anchor\":\"\",\"query\":\"\",\"file\":\"element\",\"directory\":\"/\",\"path\":\"/element\",\"relative\":\"/element\",\"port\":\"\",\"host\":\"\",\"password\":\"\",\"user\":\"\",\"userInfo\":\"\",\"authority\":\"\",\"protocol\":\"\",\"source\":\"/element\",\"queryKey\":{},\"chunks\":[\"element\"]},\"urlOriginal\":\"/session/69c72380-4277-11e8-ad17-71f4f018edff/element\"}}\nCommand duration or timeout: 0 milliseconds\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSCommandExecutor.execute(PhantomJSCommandExecutor.java:82)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)\r\n\tat US6StepsDef.theUserIsOnTheContactDetailsPageOfTheUserWithGUID(US6StepsDef.java:36)\r\n\tat ✽.Given the user is on the contact details page of the user with GUID \"021a1dc3-5b75-4868-bb03-333170ce9acb\"(US7.feature:8)\r\nCaused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:140)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSCommandExecutor.execute(PhantomJSCommandExecutor.java:82)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:361)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)\r\n\tat US6StepsDef.theUserIsOnTheContactDetailsPageOfTheUserWithGUID(US6StepsDef.java:36)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:300)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)\r\nCaused by: org.openqa.selenium.NoSuchElementException: {\"errorMessage\":\"Unable to find element with xpath \u0027//p\u0027\",\"request\":{\"headers\":{\"Accept-Encoding\":\"gzip\",\"Connection\":\"Keep-Alive\",\"Content-Length\":\"31\",\"Content-Type\":\"application/json; charset\u003dutf-8\",\"Host\":\"localhost:37614\",\"User-Agent\":\"okhttp/3.9.1\"},\"httpVersion\":\"1.1\",\"method\":\"POST\",\"post\":\"{\\\"using\\\":\\\"xpath\\\",\\\"value\\\":\\\"//p\\\"}\",\"url\":\"/element\",\"urlParsed\":{\"anchor\":\"\",\"query\":\"\",\"file\":\"element\",\"directory\":\"/\",\"path\":\"/element\",\"relative\":\"/element\",\"port\":\"\",\"host\":\"\",\"password\":\"\",\"user\":\"\",\"userInfo\":\"\",\"authority\":\"\",\"protocol\":\"\",\"source\":\"/element\",\"queryKey\":{},\"chunks\":[\"element\"]},\"urlOriginal\":\"/session/69c72380-4277-11e8-ad17-71f4f018edff/element\"}}\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027LAPTOP-HLMLFPV4\u0027, ip: \u0027192.168.56.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_151\u0027\nDriver info: driver.version: unknown\r\n",
+  "status": "failed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Back",
+      "offset": 24
+    }
+  ],
+  "location": "US7StepsDef.theUserClicksOnTheButton(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "CONTACTS LIST",
+      "offset": 5
+    }
+  ],
+  "location": "US7StepsDef.theScreenShouldBeDisplayed(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.after({
+  "duration": 517337766,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 531008576,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 81973807,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 536247814,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 82907732,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 78305576,
+  "status": "passed"
+});
+});
