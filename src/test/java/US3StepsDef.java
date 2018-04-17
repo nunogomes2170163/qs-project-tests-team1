@@ -23,7 +23,8 @@ public class US3StepsDef {
 
     @When("^the user changes the number of results to (\\d+)$")
     public void changeNumberOfResultsPerPage(int results) throws Throwable {
-        Select dropdown = new Select(driver.findElement(By.xpath("//div[@class='dataTables_length']/label/select")));
+        Select dropdown = new Select(driver.findElement(By.xpath("//select")));
+        //Select dropdown = new Select(driver.findElement(By.xpath("//div[@class='dataTables_length']/label/select")));
         dropdown.selectByVisibleText(String.valueOf(results));
     }
 

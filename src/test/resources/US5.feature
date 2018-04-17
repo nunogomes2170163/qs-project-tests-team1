@@ -5,8 +5,8 @@ Feature: Change between pages on the contact list available on the COS Landing P
 
     #David
   Scenario: Change contact list page
-    Given the user is on the first page of the contact list
-    And the first result is "Alex Azevedo"
+    Given the user is on the first page of the contacts list
+    And the first result on the list is "Alex Azevedo"
     And the page 1 button is active
     When the user clicks on page number 2
     Then the first result should be different than "Joao Santos"
@@ -21,9 +21,9 @@ Feature: Change between pages on the contact list available on the COS Landing P
     #Joao
   Scenario: First page of contact list previous button lock
     Given the user is on the first page of the contact list available
-    Then the "previous page" button should be disabled
+    Then the "contacts_previous" button should be disabled
 
     #David
   Scenario: Last page of contact list next button lock
     Given the user is on the last page of the contact list available
-    Then the "next page" button should be disabled
+    Then the "contacts_next" button should be disabled
