@@ -22,7 +22,7 @@ public class US2StepsDef {
     @Before
     public void setUp() {
         System.setProperty("phantomjs.binary.path",
-                "drivers/phantomjs");
+                "drivers\\phantomjs.exe");
         driver = new PhantomJSDriver();
         driver.get("http://35.190.213.163/qs-project-team1/");
     }
