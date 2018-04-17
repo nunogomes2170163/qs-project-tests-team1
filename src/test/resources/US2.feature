@@ -12,3 +12,4 @@ Feature: Search on the contact list available on the COS Landing Page
   Scenario: Search List With Non Existing User Name
     Given the search field is filled out with "Augusto"
     Then the list should display the "No matching records found" message
+    And the number of results message should be "Showing 0 to 0 of 0 entries (filtered from 200 total entries)"
