@@ -33,6 +33,18 @@ public class US1StepsDef {
         wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.tagName("body")),text));
     }
 
+    @Then("^the sub title of the page should be \"([^\"]*)\"$")
+    public void theSubTitleOfThePageShouldBe(String subTitle) throws Throwable {
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.className("sub-title")),subTitle));
+    }
+
+    @And("^the \"([^\"]*)\" message should be displayed$")
+    public void noContactsShouldBeDisplayed(String text) throws Throwable {
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.className("no-contacts")),text));
+    }
+
     @Before
     public void setUp() {
         driver = new HtmlUnitDriver();

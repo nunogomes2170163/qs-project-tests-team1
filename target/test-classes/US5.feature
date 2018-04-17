@@ -5,8 +5,8 @@ Feature: Change between pages on the contact list available on the COS Landing P
 
     #David
   Scenario: Change contact list page
-    Given the user is on the first page of the contact list
-    And the first result is "Alex Azevedo"
+    Given the user is on the first page of the contact list available
+    And the first result is "Joao Santos"
     And the page 1 button is active
     When the user clicks on page number 2
     Then the first result should be different than "Joao Santos"
