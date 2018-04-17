@@ -32,10 +32,23 @@ public class US3StepsDef {
         System.setProperty("phantomjs.binary.path",
                 "drivers\\phantomjs.exe");
         driver = new PhantomJSDriver();
+        driver.get("http://35.190.213.163/qs-project-team1/");
     }
 
     @After
     public void tearDown() {
         driver.quit();
+    }
+
+
+    @Then("^the contact list should show (\\d+) results in the current page$")
+    public void theContactListShouldShowResultsInTheCurrentPage(int results) throws Throwable {
+        int rowsCount = driver.findElements(By.xpath("//table[@id='contacts']/tbody/tr")).size();
+        assertEquals(rowsCount, results);
+    }
+
+    @And("^\"([^\"]*)\" should be the message of results$")
+    public void shouldBeTheMessageOfResults(String resultsInfo) throws Throwable {
+        assertEquals(driver.findElement(By.xpath("//div[@id='contacts_info']")).getText(),resultsInfo);
     }
 }
