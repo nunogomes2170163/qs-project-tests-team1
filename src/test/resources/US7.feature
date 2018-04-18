@@ -5,6 +5,6 @@ Feature: Return to the Contacts Orchestrator Solution's (COS) Landing Page after
 
     #Joao
   Scenario: Return to COS landing page from a details page
-    Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb"
+    Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb" - US7
     When the user clicks on the "Back" button
     Then the "CONTACTS LIST" screen should be displayed

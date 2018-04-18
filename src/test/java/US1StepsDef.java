@@ -7,6 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +17,18 @@ import static org.junit.Assert.assertEquals;
 
 public class US1StepsDef {
     private WebDriver driver;
+
+    @Before
+    public void setUp() {
+        System.setProperty("phantomjs.binary.path",
+                "drivers\\phantomjs.exe");
+        driver = new PhantomJSDriver();
+    }
+
+    @After
+    public void tearDown() {
+        driver.quit();
+    }
 
     @Given("^I access the landing page of COS$")
     public void iAccessTheLandingPageOfCOS() throws Throwable {
@@ -53,16 +66,10 @@ public class US1StepsDef {
         assertEquals(results, rowsCount);
     }
 
-    @Before
-    public void setUp() {
-        System.setProperty("phantomjs.binary.path",
-                "drivers\\phantomjs.exe");
-        driver = new PhantomJSDriver();
+    @And("^the number of results message should be \"([^\"]*)\" - US1$")
+    public void theNumberOfResultsMessageShouldBe(String resultsInfo) throws Throwable {
+        WebElement contactsInfoElement = (new WebDriverWait(driver, 10))
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("contacts_info")));
+        assertEquals(resultsInfo, contactsInfoElement.getText());
     }
-
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
-
 }

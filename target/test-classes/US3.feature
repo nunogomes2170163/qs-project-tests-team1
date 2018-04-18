@@ -5,7 +5,7 @@ Feature: Change the number of results per page presented on the contact list ava
 
    #David
   Scenario: Change the number of results per page presented on the contact list available
-    Given I access the landing page of COS
+    Given the user is on the COS landing page - US3
     When the user changes the number of results to 25
     Then the contact list should show 25 results in the current page
-    And "Showing 1 to 25 of 200 entries" should be the message of results
+    And the number of results message should be "Showing 1 to 25 of 200 entries" - US3
