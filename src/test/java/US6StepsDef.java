@@ -92,4 +92,16 @@ public class US6StepsDef {
         new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//img")));
     }
+
+
+    @When("^the user clicks on the \"([^\"]*)\" button$")
+    public void theUserClicksOnTheButton(String arg0) throws Throwable {
+        driver.findElement(By.xpath("//a[contains(@href, 'index.php')]")).click();
+    }
+
+    @Then("^the \"([^\"]*)\" screen should be displayed$")
+    public void theScreenShouldBeDisplayed(String subTittle) throws Throwable {
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//h2")),subTittle));
+    }
 }
