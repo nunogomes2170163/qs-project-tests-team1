@@ -23,7 +23,7 @@ public class US6StepsDef {
     @Before
     public void setUp() {
         System.setProperty("phantomjs.binary.path",
-                "drivers/phantomjs");
+                "drivers\\phantomjs.exe");
         driver = new PhantomJSDriver();
     }
 
@@ -34,7 +34,7 @@ public class US6StepsDef {
 
     @Given("^the user is on the COS landing page - US6$")
     public void theUserIsOnContactsList() throws Throwable {
-        driver.get("http://35.190.213.163/qs-project-team1/");
+        driver.get("http://localhost:8080/");
         TestCase.assertEquals("Contacts Orchestrator Solution", driver.getTitle());
     }
 

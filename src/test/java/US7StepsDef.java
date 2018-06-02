@@ -12,7 +12,7 @@ public class US7StepsDef {
     @Before
     public void setUp() {
         System.setProperty("phantomjs.binary.path",
-                "drivers/phantomjs");
+                "drivers\\phantomjs.exe");
         driver = new PhantomJSDriver();
     }
 

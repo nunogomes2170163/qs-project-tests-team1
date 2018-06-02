@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class US1StepsDef {
     private WebDriver driver;
@@ -32,7 +33,7 @@ public class US1StepsDef {
 
     @Given("^I access the landing page of COS$")
     public void iAccessTheLandingPageOfCOS() throws Throwable {
-        driver.get("http://35.190.213.163/qs-project-team1/");
+        driver.get("http://localhost:8080/");
         assertEquals("Contacts Orchestrator Solution", driver.getTitle());
     }
 
@@ -74,4 +75,11 @@ public class US1StepsDef {
         wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.className("no-contacts")),text));
     }
 
+    @When("^Facebook and Linkedin switches are enabled$")
+    public void facebookAndLinkedinSwitchesAreEnabled() throws Throwable {
+        WebElement checkboxFacebook = driver.findElement(By.id("FACEBOOK"));
+        WebElement checkboxLinkedIn = driver.findElement(By.id("LINKED_IN"));
+        assertTrue(checkboxFacebook.isSelected());
+        assertTrue(checkboxLinkedIn.isSelected());
+    }
 }
