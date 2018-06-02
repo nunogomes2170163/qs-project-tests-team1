@@ -27,8 +27,8 @@ Feature: Access to a Contact Orchestrator Solution's (COS) Details Page
     And the "occupation" field should be filled with ""
     And the "address" field should be filled with "R Afonso Albuquerque 27"
     And the "birthday" field should be filled with "3/31/1986"
-    And the "city" field should be filled with "Fonte Cova"
-    And the "company" field should be filled with "W. Bell and Co."
+    And the "city" field should be filled with ""
+    And the "company" field should be filled with ""
     And the "email" field should be filled with "JoaoRibeiroSantos@teleworm.us"
     And the "phone" field should be filled with "244534398"
     And the a profile photo should be displayed
