@@ -16,30 +16,22 @@ Feature: Access to the Contacts Orchestrator Solution's (COS) Landing Page
     And the contact list should show 10 results
     And the number of results message should be "Showing 1 to 10 of 217 entries" - US1
 
-
-  Scenario: Landing page's sub title and contact list returned empty
-    Given I access the landing page of COS
-    Then the sub title of the page should be "CONTACTS LIST"
-    And the "No contacts" message shouldn't be displayed
-
     #
-  Scenario: Landing page's sub tittle and contact list contains both source of contacts (Facebook and Linkedin)
+  Scenario: Landing page's sub tittle and contact list contains both source of contacts
     Given I access the landing page of COS
-    Then the sub title of the page should be "CONTACTS LIST"
-    And Facebook and Linkedin switches must be enable
-    And the contact list must display contacts from both sources
+    When Facebook and Linkedin switches are enabled
+    Then the contact list must display contacts from both sources
 
     #
   Scenario: Landing page's sub tittle and contact list should not contain from Skype and Twitter sources
     Given I access the landing page of COS
-    Then the sub title of the page should be "CONTACTS LIST"
-    And Facebook and Linkedin switches must be enable
-    And the contact list should not contain contacts from Skype and Twitter sources
+    When Facebook and Linkedin switches are not enabled
+    Then the contact list should not contain contacts from Skype and Twitter sources
 
     #
   Scenario Outline: filtering
-    Given there are two filters: Facebook and LinkedIn
-    When I turn <filter> off
+    Given I access the landing page of COS
+    When I turn <filter> switch off
     Then The contacts list should not display results with the <filter> source
     Examples:
       | filter |

@@ -13,8 +13,11 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import static org.junit.Assert.*;
 
 public class US1StepsDef {
     private WebDriver driver;
@@ -69,17 +72,53 @@ public class US1StepsDef {
         assertEquals(resultsInfo, contactsInfoElement.getText());
     }
 
-    @And("^the \"([^\"]*)\" message shouldn't be displayed$")
-    public void theMessageShouldnTBeDisplayed(String text) throws Throwable {
-        WebDriverWait wait = new WebDriverWait(driver, 3);
-        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.className("no-contacts")),text));
-    }
-
     @When("^Facebook and Linkedin switches are enabled$")
     public void facebookAndLinkedinSwitchesAreEnabled() throws Throwable {
         WebElement checkboxFacebook = driver.findElement(By.id("FACEBOOK"));
         WebElement checkboxLinkedIn = driver.findElement(By.id("LINKED_IN"));
         assertTrue(checkboxFacebook.isSelected());
         assertTrue(checkboxLinkedIn.isSelected());
+    }
+
+    @Then("^the contact list must display contacts from both sources$")
+    public void theContactListMustDisplayContactsFromBothSources() throws Throwable {
+        List<WebElement> elementsList = driver.findElements(By.xpath("//table[@id='contacts']/tbody/tr/td[3]"));
+        int countFacebook = 0;
+        int countLinkedIn = 0;
+        for (WebElement element : elementsList) {
+            if (element.getText().equals("Facebook")) {
+                countFacebook++;
+            } else if (element.getText().equals("LinkedIn")) {
+                countLinkedIn++;
+            }
+        }
+        assertTrue(countFacebook > 0);
+        assertTrue(countLinkedIn > 0);
+    }
+
+    @When("^Facebook and Linkedin switches are not enabled$")
+    public void facebookAndLinkedinSwitchesAreNotEnabled() throws Throwable {
+        WebElement checkboxFacebook = driver.findElement(By.id("FACEBOOK"));
+        WebElement checkboxLinkedIn = driver.findElement(By.id("LINKED_IN"));
+        assertTrue(!checkboxFacebook.isSelected());
+        assertTrue(!checkboxLinkedIn.isSelected());
+    }
+
+    @Then("^the \"([^\"]*)\" message should be displayed$")
+    public void theMessageShouldBeDisplayed(String text) throws Throwable {
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.className("no-contacts")),text));
+    }
+
+
+    @When("^I turn <\"([^\"]*)\"> switch off$")
+    public void iTurnSwitchOff(String filter) throws Throwable {
+        if (filter.equals("Facebook")) {
+            WebElement webElement = driver.findElement(By.xpath("//div[2]/label/span"));
+            webElement.click();
+        } else if (filter.equals("LinkedIn")) {
+            WebElement webElement = driver.findElement(By.xpath("//span"));
+            webElement.click();
+        }
     }
 }

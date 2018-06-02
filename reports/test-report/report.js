@@ -7,16 +7,509 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 20809711876,
-  "error_message": "org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027LAPTOP-HLMLFPV4\u0027, ip: \u0027192.168.56.100\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_151\u0027\nDriver info: driver.version: PhantomJSDriver\r\n\tat org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:192)\r\n\tat org.openqa.selenium.remote.service.DriverService.start(DriverService.java:178)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSCommandExecutor.execute(PhantomJSCommandExecutor.java:78)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:132)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSDriver.\u003cinit\u003e(PhantomJSDriver.java:116)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSDriver.\u003cinit\u003e(PhantomJSDriver.java:105)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSDriver.\u003cinit\u003e(PhantomJSDriver.java:95)\r\n\tat US6StepsDef.setUp(US6StepsDef.java:27)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)\r\nCaused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:29261/status] to be available after 20002 ms\r\n\tat org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)\r\n\tat org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:187)\r\n\t... 45 more\r\nCaused by: java.util.concurrent.TimeoutException\r\n\tat java.util.concurrent.FutureTask.get(FutureTask.java:205)\r\n\tat com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:148)\r\n\tat org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)\r\n\t... 46 more\r\n",
-  "status": "failed"
-});
-formatter.before({
-  "duration": 1799577636,
+  "duration": 2395526196,
   "status": "passed"
 });
 formatter.before({
-  "duration": 20006512680,
-  "error_message": "org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027LAPTOP-HLMLFPV4\u0027, ip: \u0027192.168.56.100\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_151\u0027\nDriver info: driver.version: PhantomJSDriver\r\n\tat org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:192)\r\n\tat org.openqa.selenium.remote.service.DriverService.start(DriverService.java:178)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSCommandExecutor.execute(PhantomJSCommandExecutor.java:78)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:132)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSDriver.\u003cinit\u003e(PhantomJSDriver.java:116)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSDriver.\u003cinit\u003e(PhantomJSDriver.java:105)\r\n\tat org.openqa.selenium.phantomjs.PhantomJSDriver.\u003cinit\u003e(PhantomJSDriver.java:95)\r\n\tat US2StepsDef.setUp(US2StepsDef.java:30)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\r\n\tat com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)\r\n\tat com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)\r\nCaused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:5440/status] to be available after 20000 ms\r\n\tat org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)\r\n\tat org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:187)\r\n\t... 45 more\r\nCaused by: java.util.concurrent.TimeoutException\r\n\tat java.util.concurrent.FutureTask.get(FutureTask.java:205)\r\n\tat com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:148)\r\n\tat org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)\r\n\t... 46 more\r\n",
-  "status": "failed"
+  "duration": 1615973029,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1621314754,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1611861344,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1588275043,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1631848325,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1631250262,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 7,
+  "name": "Landing page\u0027s title and text contains \"Contacts Orchestrator Solution\"",
+  "description": "",
+  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;landing-page\u0027s-title-and-text-contains-\"contacts-orchestrator-solution\"",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 8,
+  "name": "I access the landing page of COS",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 9,
+  "name": "the title of the page should be \"Contacts Orchestrator Solution\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 10,
+  "name": "I can see the text \"Contacts Orchestrator Solution\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "US1StepsDef.iAccessTheLandingPageOfCOS()"
+});
+formatter.result({
+  "duration": 3022003621,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Contacts Orchestrator Solution",
+      "offset": 33
+    }
+  ],
+  "location": "US1StepsDef.theTitleOfThePageShouldBe(String)"
+});
+formatter.result({
+  "duration": 8351734,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Contacts Orchestrator Solution",
+      "offset": 20
+    }
+  ],
+  "location": "US1StepsDef.iCanSeeTheText(String)"
+});
+formatter.result({
+  "duration": 81375254,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 525124673,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 522483348,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 85362949,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 517613509,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 517799127,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 521144999,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 522019485,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1621189307,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1598038061,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1596179325,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1609449034,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1595776726,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1616317644,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1617133052,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 13,
+  "name": "Landing page\u0027s sub title and the contact list should contain 10 results",
+  "description": "",
+  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;landing-page\u0027s-sub-title-and-the-contact-list-should-contain-10-results",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 14,
+  "name": "I access the landing page of COS",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 15,
+  "name": "the sub title of the page should be \"CONTACTS LIST\"",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
+  "name": "the contact list should show 10 results",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "the number of results message should be \"Showing 1 to 10 of 217 entries\" - US1",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "US1StepsDef.iAccessTheLandingPageOfCOS()"
+});
+formatter.result({
+  "duration": 2975735773,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "CONTACTS LIST",
+      "offset": 37
+    }
+  ],
+  "location": "US1StepsDef.theSubTitleOfThePageShouldBe(String)"
+});
+formatter.result({
+  "duration": 30897259,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "10",
+      "offset": 29
+    }
+  ],
+  "location": "US1StepsDef.theContactListShouldShowResults(int)"
+});
+formatter.result({
+  "duration": 18315321,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Showing 1 to 10 of 217 entries",
+      "offset": 41
+    }
+  ],
+  "location": "US1StepsDef.theNumberOfResultsMessageShouldBe(String)"
+});
+formatter.result({
+  "duration": 26627306,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 519804827,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 521414128,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 544963961,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 521847724,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 516662443,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 77288731,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 73566153,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1597679588,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1613046166,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1599492376,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1598397628,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1611304489,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1612435339,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1599141196,
+  "status": "passed"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 19,
+      "value": "#"
+    }
+  ],
+  "line": 20,
+  "name": "Landing page\u0027s sub tittle and contact list contains both source of contacts",
+  "description": "",
+  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;landing-page\u0027s-sub-tittle-and-contact-list-contains-both-source-of-contacts",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 21,
+  "name": "I access the landing page of COS",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 22,
+  "name": "Facebook and Linkedin switches are enabled",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 23,
+  "name": "the contact list must display contacts from both sources",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "US1StepsDef.iAccessTheLandingPageOfCOS()"
+});
+formatter.result({
+  "duration": 2982494981,
+  "status": "passed"
+});
+formatter.match({
+  "location": "US1StepsDef.facebookAndLinkedinSwitchesAreEnabled()"
+});
+formatter.result({
+  "duration": 46365581,
+  "status": "passed"
+});
+formatter.match({
+  "location": "US1StepsDef.theContactListMustDisplayContactsFromBothSources()"
+});
+formatter.result({
+  "duration": 222135997,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 516375080,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 518754935,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 532338992,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 517704677,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 80715561,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 517715982,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 520638469,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1607260998,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1608172680,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1609545307,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1612990371,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1598337093,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1609622619,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1624012603,
+  "status": "passed"
+});
+formatter.scenario({
+  "comments": [
+    {
+      "line": 25,
+      "value": "#"
+    }
+  ],
+  "line": 26,
+  "name": "Landing page\u0027s sub tittle and contact list should not contain from Skype and Twitter sources",
+  "description": "",
+  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;landing-page\u0027s-sub-tittle-and-contact-list-should-not-contain-from-skype-and-twitter-sources",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 27,
+  "name": "I access the landing page of COS",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 28,
+  "name": "Facebook and Linkedin switches are not enabled",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 29,
+  "name": "the contact list should not contain contacts from Skype and Twitter sources",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "US1StepsDef.iAccessTheLandingPageOfCOS()"
+});
+formatter.result({
+  "duration": 2585976876,
+  "status": "passed"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.after({
+  "duration": 517375742,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 517621531,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 532901318,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 516958556,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 517468004,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 518459185,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 516945064,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "comments": [
+    {
+      "line": 31,
+      "value": "#"
+    }
+  ],
+  "line": 32,
+  "name": "filtering",
+  "description": "",
+  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;filtering",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 33,
+  "name": "I access the landing page of COS",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 34,
+  "name": "I turn \u003cfilter\u003e switch off",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 35,
+  "name": "The contacts list should not display results with the \u003cfilter\u003e source",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 36,
+  "name": "",
+  "description": "",
+  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;filtering;",
+  "rows": [
+    {
+      "cells": [
+        "filter"
+      ],
+      "line": 37,
+      "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;filtering;;1"
+    },
+    {
+      "cells": [
+        "LinkedIn"
+      ],
+      "line": 38,
+      "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;filtering;;2"
+    },
+    {
+      "cells": [
+        "Facebook"
+      ],
+      "line": 39,
+      "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;filtering;;3"
+    }
+  ],
+  "keyword": "Examples"
 });
