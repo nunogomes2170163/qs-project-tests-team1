@@ -24,7 +24,7 @@ Feature: Access to a Contact Orchestrator Solution's (COS) Details Page
     Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb" - US6
     Then the "givenName" field should be filled with "Joao"
     And the "surname" field should be filled with "Santos"
-    And the "occupation" field should be filled with "School social worker"
+    And the "occupation" field should be filled with ""
     And the "address" field should be filled with "R Afonso Albuquerque 27"
     And the "birthday" field should be filled with "3/31/1986"
     And the "city" field should be filled with "Fonte Cova"
