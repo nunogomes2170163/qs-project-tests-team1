@@ -1,10 +1,69 @@
-Feature: Return to the Contacts Orchestrator Solution's (COS) Landing Page after checking a details page
+Feature: Access to Contact Orchestrator Solution's (COS) Resolve Conflicts Page
   As a user
-  I want to return to the landing page after checking a details page
-  So that I go back to the page where the list of the contacts available are presented
+  I want to access to a list of contact conflicts on a resolve conflicts page
+  So that I can see the contact conflicts by name, email and phone number
 
-    #Joao
-  Scenario: Return to COS landing page from a details page
-    Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb" - US7
+
+  Scenario: Click on resolve conflicts
+    Given the user is on the COS landing page
+    When the user clicks on the "Resolve Conflicts" button located bottom of the page title
+    Then the page sub title should be "CONTACT CONFLICTS"
+
+
+  Scenario: Return to COS landing page from the resolve conflicts page
+    Given the user is on the resolve conflicts page
     When the user clicks on the "Back" button
     Then the "CONTACTS LIST" screen should be displayed
+
+
+  Scenario Outline: Resolve conflicts page - initial state
+    Given the user is on the COS - resolve conflicts page
+    Then it should appear a column with the title <columnTitle>
+    And there should be a button to resolve conflict and a button to keep all contacts on each entry of the corresponding column
+    Examples:
+      | columnTitle |
+      | Conflicts By Name |
+      | Conflicts By Email |
+      | Conflicts By Phone |
+
+  Scenario Outline: Resolve conflicts page - number of conflicts
+    Given the user is on the COS - resolve conflicts page
+    Then it should appear a column with the title <columnTitle>
+    And the column should have <number> conflicts to resolve
+    Examples:
+      | columnTitle | number |
+      | Name        | 22     |
+      | Email       | 15     |
+      | Phone       | 14     |
+
+
+  Scenario: Click on keep all of a contact conflict on the resolve conflicts page
+    Given the user is on the COS - resolve conflicts page
+    When the user clicks on the "keep all" button of the first entry on the "Conflicts By Name"
+    Then the conflicts with those contacts should disappear from all columns
+    And those contacts should be saved as different contacts
+
+  Scenario: Can export contacts list to CSV file
+    Given the user is on the COS - resolve conflicts page
+    When there are no contact conflicts to resolve
+    Then the button "Export contacts" should be visible
+    And the page should present a "There no conflicts to resolve" message
+
+
+  Scenario Outline: Check if contacts conflicts are detected correctly
+    Given the user is on the COS - resolve conflicts page
+    When there are contact conflicts to resolve
+    Then the all the contact conflicts on the column with the title <columnTitle> should be detected by <field>
+    Examples:
+      | columnTitle | field |
+      | Conflicts By Name | Name |
+      | Conflicts By Email | Email |
+      | Conflicts By Phone | Phone |
+
+
+  Scenario: Export contacts list to CSV file
+    Given all conflicts are resolved
+    And the export button is enable
+    And the user click on the button export
+    Then the browser should download the CSV file
+    And the CSV file should contain all the resolved conflict contacts

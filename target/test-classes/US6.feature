@@ -32,3 +32,9 @@ Feature: Access to a Contact Orchestrator Solution's (COS) Details Page
     And the "email" field should be filled with "JoaoRibeiroSantos@teleworm.us"
     And the "phone" field should be filled with "244534398"
     And the a profile photo should be displayed
+
+    #Joao
+  Scenario: Return to COS landing page from a details page
+    Given the user is on the contact details page of the user with GUID "021a1dc3-5b75-4868-bb03-333170ce9acb" - US6
+    When the user clicks on the "Back" button
+    Then the "CONTACTS LIST" screen should be displayed

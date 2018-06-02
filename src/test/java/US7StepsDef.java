@@ -2,16 +2,8 @@ import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import static junit.framework.TestCase.assertEquals;
 
 public class US7StepsDef {
 
@@ -29,5 +21,9 @@ public class US7StepsDef {
         driver.quit();
     }
 
-
+    @Given("^the user is on the COS landing page$")
+    public void theUserIsOnTheCOSLandingPage() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 }

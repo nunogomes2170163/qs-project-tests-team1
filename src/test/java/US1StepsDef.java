@@ -21,7 +21,7 @@ public class US1StepsDef {
     @Before
     public void setUp() {
         System.setProperty("phantomjs.binary.path",
-                "drivers/phantomjs");
+                "drivers\\phantomjs.exe");
         driver = new PhantomJSDriver();
     }
 
@@ -54,11 +54,6 @@ public class US1StepsDef {
         wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.className("sub-title")),subTitle));
     }
 
-    @And("^the \"([^\"]*)\" message should be displayed$")
-    public void noContactsShouldBeDisplayed(String text) throws Throwable {
-        WebDriverWait wait = new WebDriverWait(driver, 3);
-        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.className("no-contacts")),text));
-    }
 
     @And("^the contact list should show (\\d+) results$")
     public void theContactListShouldShowResults(int results) throws Throwable {
@@ -72,4 +67,11 @@ public class US1StepsDef {
                 .until(ExpectedConditions.presenceOfElementLocated(By.id("contacts_info")));
         assertEquals(resultsInfo, contactsInfoElement.getText());
     }
+
+    @And("^the \"([^\"]*)\" message shouldn't be displayed$")
+    public void theMessageShouldnTBeDisplayed(String text) throws Throwable {
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.className("no-contacts")),text));
+    }
+
 }
