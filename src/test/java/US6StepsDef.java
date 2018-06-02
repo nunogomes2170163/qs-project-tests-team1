@@ -23,7 +23,7 @@ public class US6StepsDef {
     @Before
     public void setUp() {
         System.setProperty("phantomjs.binary.path",
-                "drivers\\phantomjs.exe");
+                "drivers/phantomjs");
         driver = new PhantomJSDriver();
     }
 
@@ -34,14 +34,14 @@ public class US6StepsDef {
 
     @Given("^the user is on the COS landing page - US6$")
     public void theUserIsOnContactsList() throws Throwable {
-        driver.get("http://localhost:8080/");
+        driver.get("http://35.190.213.163/qs-project-team1/");
         TestCase.assertEquals("Contacts Orchestrator Solution", driver.getTitle());
     }
 
     @When("^the user clicks on the \"([^\"]*)\" option of the first result$")
     public void theUserClicksOnTheOptionOfTheFirstResult(String openText) throws Throwable {
         WebElement openButton = (new WebDriverWait(driver, 3))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[@id='contacts']/tbody/tr/td[3]/a")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[@id='contacts']/tbody/tr/td[4]/a")));
         assertEquals(openButton.getText(), openText);
         userGuidTable = driver.findElement(By.xpath("//table[@id='contacts']/tbody/tr/td")).getText();
         userFullNameTable = driver.findElement(By.xpath("//table[@id='contacts']/tbody/tr/td[2]")).getText();
@@ -96,7 +96,7 @@ public class US6StepsDef {
 
     @When("^the user clicks on the \"([^\"]*)\" button$")
     public void theUserClicksOnTheButton(String arg0) throws Throwable {
-        driver.findElement(By.xpath("//a[contains(@href, 'index.php')]")).click();
+        driver.findElement(By.xpath("//a[contains(@href, 'get_contacts.php')]")).click();
     }
 
     @Then("^the \"([^\"]*)\" screen should be displayed$")
