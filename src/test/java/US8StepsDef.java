@@ -53,7 +53,7 @@ public class US8StepsDef {
 
     @Given("^the user is on the COS - resolve conflicts page$")
     public void theUserIsOnTheCOSResolveConflictsPage() throws Throwable {
-        driver.get("http://localhost:8080/resolve_conflicts.php");
+        driver.get("http://35.190.213.163/qs-project-team1/resolve_conflicts.php");
         assertEquals(driver.findElement(By.xpath("//h2")).getText(),"CONTACT CONFLICTS");
     }
     
@@ -98,7 +98,7 @@ public class US8StepsDef {
 
     @Given("^the user is on the COS landing page US8")
     public void theUserIsOnTheCOSLandingPageUS() throws Throwable {
-        driver.get("http://localhost:8080/");
+        driver.get("http://35.190.213.163/qs-project-team1/");
         assertEquals("Contacts Orchestrator Solution", driver.getTitle());
     }
 }
