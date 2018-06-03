@@ -35,3 +35,23 @@ Feature: Access to Contact Orchestrator Solution's (COS) Resolve Conflicts Page
       | Conflicts By Email       | 15     |
       | Conflicts By Phone       | 14     |
 
+  Scenario: Click on keep all of a contact conflict on the resolve conflicts page
+    Given the user is on the COS - resolve conflicts page
+    When the user clicks on the "keep all" button of the first entry on the "Conflicts By Name"
+    Then the conflicts with those contacts should disappear from all columns
+
+  Scenario: Can not export contacts list to CSV file
+    Given the user is on the COS - resolve conflicts page
+    When there are contact conflicts to resolve
+    Then the button "Export contacts" should not be visible
+
+    
+  Scenario Outline: Check if contacts conflicts are detected correctly
+    Given the user is on the COS - resolve conflicts page
+    When there are contact conflicts to resolve
+    Then all the contact conflicts on the column with the title "<columnTitle>" should be detected by "<field>"
+    Examples:
+      | columnTitle | field |
+      | Conflicts By Name |name|
+      | Conflicts By Email | email |
+      | Conflicts By Phone | phone |
