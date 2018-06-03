@@ -53,13 +53,10 @@ public class US8StepsDef {
 
     @Given("^the user is on the COS - resolve conflicts page$")
     public void theUserIsOnTheCOSResolveConflictsPage() throws Throwable {
-        driver.get("http://localhost:8080/resolve_conflicts.php");
-        assertEquals("Contacts Orchestrator Solution", driver.getTitle());
+        driver.get("http://35.190.213.163/qs-project-team1/resolve_conflicts.php");
         assertEquals(driver.findElement(By.xpath("//h2")).getText(),"CONTACT CONFLICTS");
     }
-
-
-
+    
 
 
     @Then("^the \"([^\"]*)\" screen should be displayed - USseve$")
@@ -96,13 +93,12 @@ public class US8StepsDef {
 
     @When("^the user clicks on the \"([^\"]*)\" button US8")
     public void theUserClicksOnTheButtonUS(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        driver.findElement(By.xpath("//a[contains(text(),'< back')]")).click();
     }
 
     @Given("^the user is on the COS landing page US8")
     public void theUserIsOnTheCOSLandingPageUS() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        driver.get("http://35.190.213.163/qs-project-team1/");
+        assertEquals("Contacts Orchestrator Solution", driver.getTitle());
     }
 }
