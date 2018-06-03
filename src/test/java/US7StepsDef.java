@@ -1,6 +1,6 @@
-import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -66,14 +66,12 @@ public class US7StepsDef {
 
     @When("^Facebook and Linkedin switches are not enabled$")
     public void facebookAndLinkedinSwitchesAreNotEnabled() throws Throwable {
-        WebElement checkboxFacebook = driver.findElement(By.id("FACEBOOK"));
-        WebElement checkboxLinkedIn = driver.findElement(By.id("LINKED_IN"));
         WebElement clickFacebook = driver.findElement(By.xpath("//div[2]/label/span"));
         WebElement clickLinkedIn = driver.findElement(By.xpath("//span"));
         clickFacebook.click();
         clickLinkedIn.click();
-        assertTrue(!checkboxFacebook.isSelected());
-        assertTrue(!checkboxLinkedIn.isSelected());
+        checkFilterIsNotSelected("FACEBOOK");
+        checkFilterIsNotSelected("LINKED_IN");
     }
 
     @Then("^the \"([^\"]*)\" message should be displayed$")
@@ -87,15 +85,13 @@ public class US7StepsDef {
     public void iTurnSwitchOff(String filter) throws Throwable {
         WebDriverWait wait = new WebDriverWait(driver, 3);
         if (filter.equals("Facebook")) {
-            WebElement checkboxFacebook = driver.findElement(By.id("FACEBOOK"));
             WebElement clickFacebook = driver.findElement(By.xpath("//div[2]/label/span"));
             clickFacebook.click();
-            assertTrue(!checkboxFacebook.isSelected());
+            checkFilterIsNotSelected("FACEBOOK");
         } else if (filter.equals("LinkedIn")) {
-            WebElement checkboxLinkedIn = driver.findElement(By.id("LINKED_IN"));
             WebElement clickLinkedIn = driver.findElement(By.xpath("//span"));
             clickLinkedIn.click();
-            assertTrue(!checkboxLinkedIn.isSelected());
+            checkFilterIsNotSelected("LINKED_IN");
         }
     }
 
@@ -124,5 +120,51 @@ public class US7StepsDef {
             }
             assertTrue(count == 0);
         }
+    }
+
+    @And("^Go to resolve conflicts page$")
+    public void goToResolveConflictsPage() throws Throwable {
+        WebElement openButton = (new WebDriverWait(driver, 3))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(@href, 'resolve_conflicts.php')]")));
+        openButton.click();
+    }
+
+    @And("^Return to landing page$")
+    public void returnToLandingPage() throws Throwable {
+        WebElement openButton = (new WebDriverWait(driver, 3))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[contains(@href, 'get_contacts.php?resetData=true')]")));
+        openButton.click();
+    }
+
+    @Then("^The \"([^\"]*)\" switch must still be off$")
+    public void theSwitchMustStillBeOff(String filter) throws Throwable {
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        if (filter.equals("Facebook")) {
+            checkFilterIsNotSelected("FACEBOOK");
+        } else if (filter.equals("LinkedIn")) {
+            checkFilterIsNotSelected("LINKED_IN");
+        }
+    }
+
+    @When("^I turn both Facebook and LinkedIn switches off$")
+    public void iTurnBothFacebookAndLinkedInSwitchesOff() throws Throwable {
+        WebElement clickFacebook = driver.findElement(By.xpath("//div[2]/label/span"));
+        clickFacebook.click();
+        checkFilterIsNotSelected("FACEBOOK");
+        WebElement clickLinkedIn = driver.findElement(By.xpath("//span"));
+        clickLinkedIn.click();
+        checkFilterIsNotSelected("LINKED_IN");
+    }
+
+    @Then("^Both Facebook and LinkedIn switches must still be off$")
+    public void bothFacebookAndLinkedInSwitchesMustStillBeOff() throws Throwable {
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        checkFilterIsNotSelected("FACEBOOK");
+        checkFilterIsNotSelected("LINKED_IN");
+    }
+
+    private void checkFilterIsNotSelected(String filter) {
+        WebElement checkbox = driver.findElement(By.id(filter));
+        assertTrue(!checkbox.isSelected());
     }
 }
