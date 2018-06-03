@@ -2,6 +2,7 @@ Feature: Access to Contact Orchestrator Solution's (COS) Resolve Conflicts Page
   As a user
   I want to access to a list of contact conflicts on a resolve conflicts page
   So that I can see the contact conflicts by name, email and phone number
+
   Scenario: Click on resolve conflicts
     Given the user is on the COS landing page US8
     When the user clicks on the "Resolve conflicts" button located bottom of the page title
