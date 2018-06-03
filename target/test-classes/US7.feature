@@ -1,69 +1,50 @@
-Feature: Access to Contact Orchestrator Solution's (COS) Resolve Conflicts Page
+Feature: Filtering the source of contacts
   As a user
-  I want to access to a list of contact conflicts on a resolve conflicts page
-  So that I can see the contact conflicts by name, email and phone number
+  I want to be able to filter the contacts list by source
+  So that i can see contacts from a source at a time
 
+  Scenario: Landing page's sub tittle and contact list contains both source of contacts
+    Given I access the landing page of COS - US7
+    When Facebook and Linkedin switches are enabled
+    Then the contact list must display contacts from both sources
 
-  Scenario: Click on resolve conflicts
-    Given the user is on the COS landing page
-    When the user clicks on the "Resolve Conflicts" button located bottom of the page title
-    Then the page sub title should be "CONTACT CONFLICTS"
+  Scenario: Landing page's sub tittle and contact list should not contain from Skype and Twitter sources
+    Given I access the landing page of COS - US7
+    When Facebook and Linkedin switches are not enabled
+    Then the "No matching records found" message should be displayed
 
-
-  Scenario: Return to COS landing page from the resolve conflicts page
-    Given the user is on the resolve conflicts page
-    When the user clicks on the "Back" button
-    Then the "CONTACTS LIST" screen should be displayed
-
-
-  Scenario Outline: Resolve conflicts page - initial state
-    Given the user is on the COS - resolve conflicts page
-    Then it should appear a column with the title <columnTitle>
-    And there should be a button to resolve conflict and a button to keep all contacts on each entry of the corresponding column
+  Scenario Outline: Filtering source of contacts by Facebook and LinkedIn
+    Given I access the landing page of COS - US7
+    And Facebook and Linkedin switches are enabled
+    When I turn "<filter>" switch off
+    Then The contacts list should not display results with the "<filter>" source
     Examples:
-      | columnTitle |
-      | Conflicts By Name |
-      | Conflicts By Email |
-      | Conflicts By Phone |
+      | filter |
+      |  LinkedIn   |
+      |  Facebook   |
 
-  Scenario Outline: Resolve conflicts page - number of conflicts
-    Given the user is on the COS - resolve conflicts page
-    Then it should appear a column with the title <columnTitle>
-    And the column should have <number> conflicts to resolve
-    Examples:
-      | columnTitle | number |
-      | Name        | 22     |
-      | Email       | 15     |
-      | Phone       | 14     |
+  # This test is commented because it appears that when the web driver changes pages the values stored on session are not maintained,
+  # which makes it impossible to run this test automatically. Therefore, this scenario will tested manually.
+  #Scenario Outline: Keep Facebook or LinkedIn filtering options on session
+  #  Given I access the landing page of COS - US7
+  #  And Facebook and Linkedin switches are enabled
+  #  When I turn "<filter>" switch off
+  #  And Go to resolve conflicts page
+  #  And Return to landing page
+  #  Then The "<filter>" switch must still be off
+  #  And The contacts list should not display results with the "<filter>" source
+  #  Examples:
+  #    | filter |
+  #    |  LinkedIn   |
+  #    |  Facebook   |
 
-
-  Scenario: Click on keep all of a contact conflict on the resolve conflicts page
-    Given the user is on the COS - resolve conflicts page
-    When the user clicks on the "keep all" button of the first entry on the "Conflicts By Name"
-    Then the conflicts with those contacts should disappear from all columns
-    And those contacts should be saved as different contacts
-
-  Scenario: Can export contacts list to CSV file
-    Given the user is on the COS - resolve conflicts page
-    When there are no contact conflicts to resolve
-    Then the button "Export contacts" should be visible
-    And the page should present a "There no conflicts to resolve" message
-
-
-  Scenario Outline: Check if contacts conflicts are detected correctly
-    Given the user is on the COS - resolve conflicts page
-    When there are contact conflicts to resolve
-    Then the all the contact conflicts on the column with the title <columnTitle> should be detected by <field>
-    Examples:
-      | columnTitle | field |
-      | Conflicts By Name | Name |
-      | Conflicts By Email | Email |
-      | Conflicts By Phone | Phone |
-
-
-  Scenario: Export contacts list to CSV file
-    Given all conflicts are resolved
-    And the export button is enable
-    And the user click on the button export
-    Then the browser should download the CSV file
-    And the CSV file should contain all the resolved conflict contacts
+  # This test is commented because it appears that when the web driver changes pages the values stored on session are not maintained,
+  # which makes it impossible to run this test automatically. Therefore, this scenario will tested manually.
+  #Scenario: Keep both Facebook and LinkedIn filtering options on session at the same time
+  #  Given I access the landing page of COS - US7
+  #  And Facebook and Linkedin switches are enabled
+  #  When I turn both Facebook and LinkedIn switches off
+  #  And Go to resolve conflicts page
+  #  And Return to landing page
+  #  Then Both Facebook and LinkedIn switches must still be off
+  #  And the "No matching records found" message should be displayed

@@ -1,515 +1,365 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("US1.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("US7.feature");
 formatter.feature({
   "line": 1,
-  "name": "Access to the Contacts Orchestrator Solution\u0027s (COS) Landing Page",
-  "description": "As a user\r\nI want to access to the URL address provided for the landing page\r\nSo that I can see the list of the contacts available",
-  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page",
+  "name": "Filtering the source of contacts",
+  "description": "As a user\r\nI want to be able to filter the contacts list by source\r\nSo that i can see contacts from a source at a time",
+  "id": "filtering-the-source-of-contacts",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 2395526196,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1615973029,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1621314754,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1611861344,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1588275043,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1631848325,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1631250262,
+  "duration": 2466756619,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 7,
-  "name": "Landing page\u0027s title and text contains \"Contacts Orchestrator Solution\"",
+  "line": 6,
+  "name": "Landing page\u0027s sub tittle and contact list contains both source of contacts",
   "description": "",
-  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;landing-page\u0027s-title-and-text-contains-\"contacts-orchestrator-solution\"",
+  "id": "filtering-the-source-of-contacts;landing-page\u0027s-sub-tittle-and-contact-list-contains-both-source-of-contacts",
   "type": "scenario",
   "keyword": "Scenario"
+});
+formatter.step({
+  "line": 7,
+  "name": "I access the landing page of COS - US7",
+  "keyword": "Given "
 });
 formatter.step({
   "line": 8,
-  "name": "I access the landing page of COS",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 9,
-  "name": "the title of the page should be \"Contacts Orchestrator Solution\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 10,
-  "name": "I can see the text \"Contacts Orchestrator Solution\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "US1StepsDef.iAccessTheLandingPageOfCOS()"
-});
-formatter.result({
-  "duration": 3022003621,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Contacts Orchestrator Solution",
-      "offset": 33
-    }
-  ],
-  "location": "US1StepsDef.theTitleOfThePageShouldBe(String)"
-});
-formatter.result({
-  "duration": 8351734,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Contacts Orchestrator Solution",
-      "offset": 20
-    }
-  ],
-  "location": "US1StepsDef.iCanSeeTheText(String)"
-});
-formatter.result({
-  "duration": 81375254,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 525124673,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 522483348,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 85362949,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 517613509,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 517799127,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 521144999,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 522019485,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1621189307,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1598038061,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1596179325,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1609449034,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1595776726,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1616317644,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1617133052,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 13,
-  "name": "Landing page\u0027s sub title and the contact list should contain 10 results",
-  "description": "",
-  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;landing-page\u0027s-sub-title-and-the-contact-list-should-contain-10-results",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 14,
-  "name": "I access the landing page of COS",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 15,
-  "name": "the sub title of the page should be \"CONTACTS LIST\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 16,
-  "name": "the contact list should show 10 results",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 17,
-  "name": "the number of results message should be \"Showing 1 to 10 of 217 entries\" - US1",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "US1StepsDef.iAccessTheLandingPageOfCOS()"
-});
-formatter.result({
-  "duration": 2975735773,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "CONTACTS LIST",
-      "offset": 37
-    }
-  ],
-  "location": "US1StepsDef.theSubTitleOfThePageShouldBe(String)"
-});
-formatter.result({
-  "duration": 30897259,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "10",
-      "offset": 29
-    }
-  ],
-  "location": "US1StepsDef.theContactListShouldShowResults(int)"
-});
-formatter.result({
-  "duration": 18315321,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Showing 1 to 10 of 217 entries",
-      "offset": 41
-    }
-  ],
-  "location": "US1StepsDef.theNumberOfResultsMessageShouldBe(String)"
-});
-formatter.result({
-  "duration": 26627306,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 519804827,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 521414128,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 544963961,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 521847724,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 516662443,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 77288731,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 73566153,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1597679588,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1613046166,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1599492376,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1598397628,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1611304489,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1612435339,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1599141196,
-  "status": "passed"
-});
-formatter.scenario({
-  "comments": [
-    {
-      "line": 19,
-      "value": "#"
-    }
-  ],
-  "line": 20,
-  "name": "Landing page\u0027s sub tittle and contact list contains both source of contacts",
-  "description": "",
-  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;landing-page\u0027s-sub-tittle-and-contact-list-contains-both-source-of-contacts",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 21,
-  "name": "I access the landing page of COS",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 22,
   "name": "Facebook and Linkedin switches are enabled",
   "keyword": "When "
 });
 formatter.step({
-  "line": 23,
+  "line": 9,
   "name": "the contact list must display contacts from both sources",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "US1StepsDef.iAccessTheLandingPageOfCOS()"
+  "arguments": [
+    {
+      "val": "7",
+      "offset": 37
+    }
+  ],
+  "location": "US7StepsDef.iAccessTheLandingPageOfCOSUS(int)"
 });
 formatter.result({
-  "duration": 2982494981,
+  "duration": 2828543296,
   "status": "passed"
 });
 formatter.match({
-  "location": "US1StepsDef.facebookAndLinkedinSwitchesAreEnabled()"
+  "location": "US7StepsDef.facebookAndLinkedinSwitchesAreEnabled()"
 });
 formatter.result({
-  "duration": 46365581,
+  "duration": 46056339,
   "status": "passed"
 });
 formatter.match({
-  "location": "US1StepsDef.theContactListMustDisplayContactsFromBothSources()"
+  "location": "US7StepsDef.theContactListMustDisplayContactsFromBothSources()"
 });
 formatter.result({
-  "duration": 222135997,
+  "duration": 2008342617,
   "status": "passed"
 });
 formatter.after({
-  "duration": 516375080,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 518754935,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 532338992,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 517704677,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 80715561,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 517715982,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 520638469,
+  "duration": 532388588,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1607260998,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1608172680,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1609545307,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1612990371,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1598337093,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1609622619,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 1624012603,
+  "duration": 1646843302,
   "status": "passed"
 });
 formatter.scenario({
-  "comments": [
-    {
-      "line": 25,
-      "value": "#"
-    }
-  ],
-  "line": 26,
+  "line": 11,
   "name": "Landing page\u0027s sub tittle and contact list should not contain from Skype and Twitter sources",
   "description": "",
-  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;landing-page\u0027s-sub-tittle-and-contact-list-should-not-contain-from-skype-and-twitter-sources",
+  "id": "filtering-the-source-of-contacts;landing-page\u0027s-sub-tittle-and-contact-list-should-not-contain-from-skype-and-twitter-sources",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 27,
-  "name": "I access the landing page of COS",
+  "line": 12,
+  "name": "I access the landing page of COS - US7",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 28,
+  "line": 13,
   "name": "Facebook and Linkedin switches are not enabled",
   "keyword": "When "
 });
 formatter.step({
-  "line": 29,
-  "name": "the contact list should not contain contacts from Skype and Twitter sources",
+  "line": 14,
+  "name": "the \"No matching records found\" message should be displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "US1StepsDef.iAccessTheLandingPageOfCOS()"
+  "arguments": [
+    {
+      "val": "7",
+      "offset": 37
+    }
+  ],
+  "location": "US7StepsDef.iAccessTheLandingPageOfCOSUS(int)"
 });
 formatter.result({
-  "duration": 2585976876,
+  "duration": 2657249967,
   "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "US7StepsDef.facebookAndLinkedinSwitchesAreNotEnabled()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 148891121,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "arguments": [
+    {
+      "val": "No matching records found",
+      "offset": 5
+    }
+  ],
+  "location": "US7StepsDef.theMessageShouldBeDisplayed(String)"
+});
 formatter.result({
-  "status": "undefined"
-});
-formatter.after({
-  "duration": 517375742,
+  "duration": 30968005,
   "status": "passed"
 });
 formatter.after({
-  "duration": 517621531,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 532901318,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 516958556,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 517468004,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 518459185,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 516945064,
+  "duration": 541817200,
   "status": "passed"
 });
 formatter.scenarioOutline({
-  "comments": [
-    {
-      "line": 31,
-      "value": "#"
-    }
-  ],
-  "line": 32,
-  "name": "filtering",
+  "line": 16,
+  "name": "Filtering source of contacts by Facebook and LinkedIn",
   "description": "",
-  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;filtering",
+  "id": "filtering-the-source-of-contacts;filtering-source-of-contacts-by-facebook-and-linkedin",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 33,
-  "name": "I access the landing page of COS",
+  "line": 17,
+  "name": "I access the landing page of COS - US7",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 34,
-  "name": "I turn \u003cfilter\u003e switch off",
+  "line": 18,
+  "name": "Facebook and Linkedin switches are enabled",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "I turn \"\u003cfilter\u003e\" switch off",
   "keyword": "When "
 });
 formatter.step({
-  "line": 35,
-  "name": "The contacts list should not display results with the \u003cfilter\u003e source",
+  "line": 20,
+  "name": "The contacts list should not display results with the \"\u003cfilter\u003e\" source",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 36,
+  "line": 21,
   "name": "",
   "description": "",
-  "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;filtering;",
+  "id": "filtering-the-source-of-contacts;filtering-source-of-contacts-by-facebook-and-linkedin;",
   "rows": [
     {
       "cells": [
         "filter"
       ],
-      "line": 37,
-      "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;filtering;;1"
+      "line": 22,
+      "id": "filtering-the-source-of-contacts;filtering-source-of-contacts-by-facebook-and-linkedin;;1"
     },
     {
       "cells": [
         "LinkedIn"
       ],
-      "line": 38,
-      "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;filtering;;2"
+      "line": 23,
+      "id": "filtering-the-source-of-contacts;filtering-source-of-contacts-by-facebook-and-linkedin;;2"
     },
     {
       "cells": [
         "Facebook"
       ],
-      "line": 39,
-      "id": "access-to-the-contacts-orchestrator-solution\u0027s-(cos)-landing-page;filtering;;3"
+      "line": 24,
+      "id": "filtering-the-source-of-contacts;filtering-source-of-contacts-by-facebook-and-linkedin;;3"
     }
   ],
   "keyword": "Examples"
+});
+formatter.before({
+  "duration": 1627220993,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 23,
+  "name": "Filtering source of contacts by Facebook and LinkedIn",
+  "description": "",
+  "id": "filtering-the-source-of-contacts;filtering-source-of-contacts-by-facebook-and-linkedin;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 17,
+  "name": "I access the landing page of COS - US7",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 18,
+  "name": "Facebook and Linkedin switches are enabled",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "I turn \"LinkedIn\" switch off",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 20,
+  "name": "The contacts list should not display results with the \"LinkedIn\" source",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "7",
+      "offset": 37
+    }
+  ],
+  "location": "US7StepsDef.iAccessTheLandingPageOfCOSUS(int)"
+});
+formatter.result({
+  "duration": 2934221433,
+  "status": "passed"
+});
+formatter.match({
+  "location": "US7StepsDef.facebookAndLinkedinSwitchesAreEnabled()"
+});
+formatter.result({
+  "duration": 41956323,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "LinkedIn",
+      "offset": 8
+    }
+  ],
+  "location": "US7StepsDef.iTurnSwitchOff(String)"
+});
+formatter.result({
+  "duration": 72531940,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "LinkedIn",
+      "offset": 55
+    }
+  ],
+  "location": "US7StepsDef.theContactsListShouldNotDisplayResultsWithTheSource(String)"
+});
+formatter.result({
+  "duration": 1093802570,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 528998955,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1646210959,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 24,
+  "name": "Filtering source of contacts by Facebook and LinkedIn",
+  "description": "",
+  "id": "filtering-the-source-of-contacts;filtering-source-of-contacts-by-facebook-and-linkedin;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 17,
+  "name": "I access the landing page of COS - US7",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 18,
+  "name": "Facebook and Linkedin switches are enabled",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "I turn \"Facebook\" switch off",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 20,
+  "name": "The contacts list should not display results with the \"Facebook\" source",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "7",
+      "offset": 37
+    }
+  ],
+  "location": "US7StepsDef.iAccessTheLandingPageOfCOSUS(int)"
+});
+formatter.result({
+  "duration": 3061474336,
+  "status": "passed"
+});
+formatter.match({
+  "location": "US7StepsDef.facebookAndLinkedinSwitchesAreEnabled()"
+});
+formatter.result({
+  "duration": 70352292,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Facebook",
+      "offset": 8
+    }
+  ],
+  "location": "US7StepsDef.iTurnSwitchOff(String)"
+});
+formatter.result({
+  "duration": 87180478,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Facebook",
+      "offset": 55
+    }
+  ],
+  "location": "US7StepsDef.theContactsListShouldNotDisplayResultsWithTheSource(String)"
+});
+formatter.result({
+  "duration": 1474523418,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 540098133,
+  "status": "passed"
+});
 });
