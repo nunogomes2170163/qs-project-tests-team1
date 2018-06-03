@@ -33,11 +33,7 @@ public class US8StepsDef {
         driver.quit();
     }
 
-    @Given("^the user is on the COS landing page$")
-    public void theUserIsOnTheCOSLandingPage() throws Throwable {
-        driver.get("http://35.190.213.163/qs-project-team1/");
-        assertEquals("Contacts Orchestrator Solution", driver.getTitle());
-    }
+
 
     @When("^the user clicks on the \"([^\"]*)\" button located bottom of the page title$")
     public void theUserClicksOnTheButtonLocatedBottomOfThePageTitle(String string) throws Throwable {
@@ -63,10 +59,7 @@ public class US8StepsDef {
     }
 
 
-    @When("^the user clicks on the \"([^\"]*)\" button$")
-    public void theUserClicksOnTheButton(String arg0) throws Throwable {
-        driver.findElement(By.xpath("//a[contains(text(),'< back')]")).click();
-    }
+
 
 
     @Then("^the \"([^\"]*)\" screen should be displayed - USseve$")
@@ -101,4 +94,15 @@ public class US8StepsDef {
     }
 
 
+    @When("^the user clicks on the \"([^\"]*)\" button US8")
+    public void theUserClicksOnTheButtonUS(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Given("^the user is on the COS landing page US8")
+    public void theUserIsOnTheCOSLandingPageUS() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 }
