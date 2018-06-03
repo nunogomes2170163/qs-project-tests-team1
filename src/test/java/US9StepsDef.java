@@ -23,7 +23,7 @@ public class US9StepsDef {
     @Before
     public void setUp() {
         System.setProperty("phantomjs.binary.path",
-                "drivers/phantomjsmac");
+                "drivers/phantomjs");
         driver = new PhantomJSDriver();
     }
 
