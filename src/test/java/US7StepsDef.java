@@ -139,7 +139,6 @@ public class US7StepsDef {
     @Then("^The \"([^\"]*)\" switch must still be off$")
     public void theSwitchMustStillBeOff(String filter) throws Throwable {
         WebDriverWait wait = new WebDriverWait(driver, 3);
-        String cenas = driver.findElement(By.id("contacts_info")).getText();
         if (filter.equals("Facebook")) {
             checkFilterIsNotSelected("FACEBOOK");
         } else if (filter.equals("LinkedIn")) {
