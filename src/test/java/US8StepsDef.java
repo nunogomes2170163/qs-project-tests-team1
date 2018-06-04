@@ -33,8 +33,6 @@ public class US8StepsDef {
         driver.quit();
     }
 
-
-
     @When("^the user clicks on the \"([^\"]*)\" button located bottom of the page title$")
     public void theUserClicksOnTheButtonLocatedBottomOfThePageTitle(String string) throws Throwable {
         WebElement openButton = (new WebDriverWait(driver, 3))
@@ -42,7 +40,6 @@ public class US8StepsDef {
         TestCase.assertEquals(openButton.getText(), string);
         openButton.click();
     }
-
 
     @Then("^the page sub title should be \"([^\"]*)\" - USSeven$")
     public void thePageSubTitleShouldBeUSSeven(String arg0) throws Throwable {

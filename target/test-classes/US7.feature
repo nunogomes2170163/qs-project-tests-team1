@@ -23,9 +23,6 @@ Feature: Filtering the source of contacts
       |  LinkedIn   |
       |  Facebook   |
 
-  # This test is commented because it appears that when the web driver changes pages the values stored on session are not maintained,
-  # which makes it impossible to run this test automatically. Therefore, this scenario will tested manually. Even so, the code for
-  # the steps is already in case someday the web driver maintains session variables between pages.
   Scenario Outline: Keep Facebook or LinkedIn filtering options on session
     Given I access the landing page of COS - US7
     And Facebook and Linkedin switches are enabled
@@ -39,9 +36,6 @@ Feature: Filtering the source of contacts
       |  LinkedIn   |
       |  Facebook   |
 
-  # This test is commented because it appears that when the web driver changes pages the values stored on session are not maintained,
-  # which makes it impossible to run this test automatically. Therefore, this scenario will tested manually. Even so, the code for
-  # the steps is already in case someday the web driver maintains session variables between pages.
   Scenario: Keep both Facebook and LinkedIn filtering options on session at the same time
     Given I access the landing page of COS - US7
     And Facebook and Linkedin switches are enabled

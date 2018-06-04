@@ -32,8 +32,8 @@ public class US7StepsDef {
         driver.quit();
     }
 
-    @Given("^I access the landing page of COS - US(\\d+)$")
-    public void iAccessTheLandingPageOfCOSUS(int arg0) throws Throwable {
+    @Given("^I access the landing page of COS - US7$")
+    public void iAccessTheLandingPageOfCOSUS() throws Throwable {
         driver.get("http://35.190.213.163/qs-project-team1/");
         assertEquals("Contacts Orchestrator Solution", driver.getTitle());
     }

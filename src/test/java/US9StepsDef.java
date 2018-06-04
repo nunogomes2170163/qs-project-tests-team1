@@ -34,7 +34,7 @@ public class US9StepsDef {
 
     @Given("^the user is on the resolve conflicts page$")
     public void theUserIsOnTheConflictsResolvePage() {
-        driver.get("http://localhost:8080/resolve_conflicts.php");
+        driver.get("http://35.190.213.163/qs-project-team1/resolve_conflicts.php");
         assertEquals(driver.findElement(By.xpath("//h2")).getText(), "CONTACT CONFLICTS");
     }
 
@@ -128,7 +128,7 @@ public class US9StepsDef {
 
     @And("^the remove button should be displayed on each one of the columns US9$")
     public void removeButtonShouldBeDisplayed() {
-        int numberOfButtons = driver.findElements(By.xpath("//a[@class='js-remove-contact']")).size();
+        int numberOfButtons = driver.findElements(By.className("js-remove-contact")).size();
         assertEquals(3, numberOfButtons);
     }
 
@@ -141,6 +141,7 @@ public class US9StepsDef {
 
     @Then("^there should be presented only two columns$")
     public void thereShouldOnlyBeTwoColumns() {
+        WebDriverWait wait = new WebDriverWait(driver, 3);
         int numberOfColumns = driver.findElements(By.className("single-conflict")).size();
         assertEquals(2, numberOfColumns);
     }
