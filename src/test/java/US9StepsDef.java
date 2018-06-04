@@ -74,7 +74,7 @@ public class US9StepsDef {
 
     @Given("^the user is on the \"([^\"]*)\" of the users with GUIDs \"([^\"]*)\" US9$")
     public void theUserIsOnResolveSingleConflictPage(String subTitle, String guids) {
-        driver.get("http://localhost:8080/resolve_single_conflict.php?guids=d4f8d88d-afe1-4c63-821a-27as83d6bb49|d4f8d88d-afe1-4c63-821a-278883d6bb49");
+        driver.get("http://35.190.213.163/qs-project-team1/resolve_single_conflict.php?guids=d4f8d88d-afe1-4c63-821a-27as83d6bb49|d4f8d88d-afe1-4c63-821a-278883d6bb49");
         assertEquals(driver.findElement(By.xpath("//h2")).getText(), subTitle);
         assertEquals(guids, driver.getCurrentUrl().split("guids=")[1]);
     }
@@ -94,7 +94,6 @@ public class US9StepsDef {
 
     @Given("^the user is on the single conflict page of the users with GUIDs \"([^\"]*)\" US9$")
     public void theUserIsOnResolveSingleConflictPage(String guids) {
-        driver.get("http://localhost:8080/resolve_conflicts.php");
         WebElement resolveButton = driver.findElement(By.xpath("//div[@class='conflict-actions'][1]/a"));
         assertEquals(guids, resolveButton.getAttribute("href").split("guids=")[1]);
         resolveButton.click();
@@ -110,7 +109,6 @@ public class US9StepsDef {
 
     @Given("^the user is on the \"([^\"]*)\" of the users with GUIDs \"([^\"]*)\" US91$")
     public void theUserIsOnResolveSingleConflictPageWithThreeConflicts(String subTitle, String guids) {
-        driver.get("http://localhost:8080/resolve_conflicts.php");
         WebDriverWait wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//h2")), "CONTACT CONFLICTS"));
         WebElement resolveButton = driver.findElements(By.xpath("//div[@class='conflict-actions']")).get(9).findElement(By.xpath("a[1]"));
