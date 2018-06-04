@@ -33,6 +33,12 @@ public class US8StepsDef {
         driver.quit();
     }
 
+    @Given("^the user is on the COS - resolve conflicts page$")
+    public void theUserIsOnTheCOSResolveConflictsPage() throws Throwable {
+        driver.get("http://35.190.213.163/qs-project-team1/resolve_conflicts.php");
+        assertEquals(driver.findElement(By.xpath("//h2")).getText(),"CONTACT CONFLICTS");
+    }
+
     @When("^the user clicks on the \"([^\"]*)\" button located bottom of the page title$")
     public void theUserClicksOnTheButtonLocatedBottomOfThePageTitle(String string) throws Throwable {
         WebElement openButton = (new WebDriverWait(driver, 3))
@@ -46,12 +52,6 @@ public class US8StepsDef {
         TestCase.assertEquals(driver.findElement(By.xpath("//h2")).getText(),arg0);
     }
 
-    @Given("^the user is on the COS - resolve conflicts page$")
-    public void theUserIsOnTheCOSResolveConflictsPage() throws Throwable {
-        driver.get("http://35.190.213.163/qs-project-team1/resolve_conflicts.php");
-        assertEquals(driver.findElement(By.xpath("//h2")).getText(),"CONTACT CONFLICTS");
-    }
-
     @Given("^the user is on the COS landing page US8")
     public void theUserIsOnTheCOSLandingPageUS() throws Throwable {
         driver.get("http://35.190.213.163/qs-project-team1/");
@@ -59,7 +59,7 @@ public class US8StepsDef {
     }
 
 
-    @Then("^the \"([^\"]*)\" screen should be displayed - USseve$")
+    @Then("^the \"([^\"]*)\" screen should be displayed - US8$")
     public void theScreenShouldBeDisplayedUSseve(String arg0) throws Throwable {
         WebDriverWait wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//h2")),arg0));
@@ -101,7 +101,6 @@ public class US8StepsDef {
     @When("^the user clicks on the \"([^\"]*)\" button of the first entry on the \"([^\"]*)\"$")
     public void theUserClicksOnTheButtonOfTheFirstEntryOnThe(String arg0, String arg1) throws Throwable {
         driver.findElement(By.xpath("//a[contains(@href, 'dismiss_single_conflict.php?guids=d4f8d88d-afe1-4c63-821a-27as83d6bb49|d4f8d88d-afe1-4c63-821a-278883d6bb49')]")).click();
-
         assertEquals(driver.findElement(By.xpath("//h2")).getText(),"CONTACT CONFLICTS");
     }
 

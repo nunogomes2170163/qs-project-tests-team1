@@ -79,14 +79,14 @@ public class US9StepsDef {
         assertEquals(guids, driver.getCurrentUrl().split("guids=")[1]);
     }
 
-    @When("^the user clicks on the Back button US9$")
+    @When("^the user clicks on the Back button$")
     public void theUserClicksBack() {
         WebElement backBtn = driver.findElement(By.xpath("//div[@class='options']/a[1]"));
         assertEquals("< back", backBtn.getText());
         backBtn.click();
     }
 
-    @Then("^the \"([^\"]*)\" screen should be displayed US9$")
+    @Then("^the \"([^\"]*)\" screen should be displayed - US9$")
     public void theShowConflictsScreenShouldAppear(String subTitle) {
         WebDriverWait wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//h2")), subTitle));
@@ -94,6 +94,7 @@ public class US9StepsDef {
 
     @Given("^the user is on the single conflict page of the users with GUIDs \"([^\"]*)\" US9$")
     public void theUserIsOnResolveSingleConflictPage(String guids) {
+        driver.get("http://35.190.213.163/qs-project-team1/resolve_conflicts.php");
         WebElement resolveButton = driver.findElement(By.xpath("//div[@class='conflict-actions'][1]/a"));
         assertEquals(guids, resolveButton.getAttribute("href").split("guids=")[1]);
         resolveButton.click();
@@ -101,7 +102,7 @@ public class US9StepsDef {
         wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//h2")), "RESOLVE SINGLE CONFLICT"));
     }
 
-    @Then("^the last column should have the \"([^\"]*)\" checked with number \"([^\"]*)\" US9$")
+    @Then("^the last column should have the \"([^\"]*)\" checked with number \"([^\"]*)\"$")
     public void checkLastColumnRadios(String radioName, int fieldNumber) {
         WebElement radio = driver.findElement(By.xpath("//div[@class='single-conflict'][2]/p[" + fieldNumber + "]/label/input"));
         assertNotNull(radio.getAttribute("checked"));
@@ -109,6 +110,7 @@ public class US9StepsDef {
 
     @Given("^the user is on the \"([^\"]*)\" of the users with GUIDs \"([^\"]*)\" US91$")
     public void theUserIsOnResolveSingleConflictPageWithThreeConflicts(String subTitle, String guids) {
+        driver.get("http://35.190.213.163/qs-project-team1/resolve_conflicts.php");
         WebDriverWait wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//h2")), "CONTACT CONFLICTS"));
         WebElement resolveButton = driver.findElements(By.xpath("//div[@class='conflict-actions']")).get(9).findElement(By.xpath("a[1]"));
@@ -118,13 +120,13 @@ public class US9StepsDef {
         wait1.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//h2")), "RESOLVE SINGLE CONFLICT"));
     }
 
-    @Then("^there should be presented three columns US9$")
+    @Then("^there should be presented three columns")
     public void thereShouldBeThreeColumns() {
         int numberOfColumns = driver.findElements(By.xpath("//body/main/div[@class='single-conflict-container']/div[@class='single-conflict']")).size();
         assertEquals(3, numberOfColumns);
     }
 
-    @And("^the remove button should be displayed on each one of the columns US9$")
+    @And("^the remove button should be displayed on each one of the columns$")
     public void removeButtonShouldBeDisplayed() {
         int numberOfButtons = driver.findElements(By.className("js-remove-contact")).size();
         assertEquals(3, numberOfButtons);
@@ -149,12 +151,6 @@ public class US9StepsDef {
         WebElement saveButton = driver.findElement(By.className("js-save-conflict"));
         assertEquals("Save", saveButton.getText());
         saveButton.click();
-    }
-
-    @Then("^the \"([^\"]*)\" page should be displayed$")
-    public void thePreviousPageShouldBeDisplayed(String subTitle) {
-        WebDriverWait wait = new WebDriverWait(driver, 3);
-        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//h2")), subTitle));
     }
 
     @And("^all the conflicts related to the previous contacts should not appear on any of the columns$")

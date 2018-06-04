@@ -12,7 +12,7 @@ Feature: Access to Contact Orchestrator Solution's (COS) Resolve Conflicts Page
   Scenario: Return to COS landing page from the resolve conflicts page
     Given the user is on the COS - resolve conflicts page
     When the user clicks on the "Back" button US8
-    Then the "CONTACTS LIST" screen should be displayed - USseve
+    Then the "CONTACTS LIST" screen should be displayed - US8
 
 
   Scenario Outline: Resolve conflicts page - initial state

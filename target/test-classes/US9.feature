@@ -23,12 +23,12 @@ Feature: Resolve a detected conflict and merge the selected information in one c
 
   Scenario: Return to COS conflicts page from a single conflict page
     Given the user is on the "RESOLVE SINGLE CONFLICT" of the users with GUIDs "d4f8d88d-afe1-4c63-821a-27as83d6bb49%7Cd4f8d88d-afe1-4c63-821a-278883d6bb49" US9
-    When the user clicks on the Back button US9
-    Then the "CONTACT CONFLICTS" screen should be displayed US9
+    When the user clicks on the Back button
+    Then the "CONTACT CONFLICTS" screen should be displayed - US9
 
   Scenario Outline: Check if only one radio button is enabled at the Name, Birthday and Photo column
     Given the user is on the single conflict page of the users with GUIDs "d4f8d88d-afe1-4c63-821a-27as83d6bb49|d4f8d88d-afe1-4c63-821a-278883d6bb49" US9
-    Then the last column should have the "<fieldType>" checked with number "<fieldNumber>" US9
+    Then the last column should have the "<fieldType>" checked with number "<fieldNumber>"
     Examples:
       | fieldType | fieldNumber |
       | name      | 1           |
@@ -37,8 +37,8 @@ Feature: Resolve a detected conflict and merge the selected information in one c
 
   Scenario: If there are three or more columns should appear the remove button on each one
     Given the user is on the "RESOLVE SINGLE CONFLICT" of the users with GUIDs "d47f5d81-5376-4b2d-a3a3-7ec92qw246f8|d47f5d81-5376-4b2d-a3a3-7ec92qw246qw|0e7b141f-11f8-4dcb-b78d-d7aa71160fa3" US91
-    Then there should be presented three columns US9
-    And the remove button should be displayed on each one of the columns US9
+    Then there should be presented three columns
+    And the remove button should be displayed on each one of the columns
 
   Scenario: Removing one contact from single conflict page
     Given the user is on the "RESOLVE SINGLE CONFLICT" of the users with GUIDs "d47f5d81-5376-4b2d-a3a3-7ec92qw246f8|d47f5d81-5376-4b2d-a3a3-7ec92qw246qw|0e7b141f-11f8-4dcb-b78d-d7aa71160fa3" US91
@@ -49,5 +49,5 @@ Feature: Resolve a detected conflict and merge the selected information in one c
   Scenario: Resolve a contact conflict with two contacts
     Given the user is on the "RESOLVE SINGLE CONFLICT" of the users with GUIDs "d4f8d88d-afe1-4c63-821a-27as83d6bb49%7Cd4f8d88d-afe1-4c63-821a-278883d6bb49" US9
     When the user clicks on the save button
-    Then the "CONTACT CONFLICTS" page should be displayed
+    Then the "CONTACT CONFLICTS" screen should be displayed - US9
     And all the conflicts related to the previous contacts should not appear on any of the columns
