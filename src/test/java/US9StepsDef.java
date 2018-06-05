@@ -89,7 +89,7 @@ public class US9StepsDef {
 
     @Then("^the \"([^\"]*)\" screen should be displayed - US9$")
     public void theShowConflictsScreenShouldAppear(String subTitle) {
-        WebDriverWait wait = new WebDriverWait(driver, 5);
+        WebDriverWait wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2")));
         assertEquals(subTitle, driver.findElement(By.xpath("//h2")).getText());
     }
