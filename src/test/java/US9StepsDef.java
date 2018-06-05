@@ -13,9 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class US9StepsDef {
     private WebDriver driver;
@@ -155,6 +153,7 @@ public class US9StepsDef {
 
     @And("^all the conflicts related to the previous contacts should not appear on any of the columns$")
     public void allConflictsShouldBeResolved() {
+        WebDriverWait wait = new WebDriverWait(driver, 3);
         ArrayList<String> nameList = new ArrayList<String>();
         int rowsCount = driver.findElements(By.xpath("//body/descendant::div[@class='conflict-row']")).size();
         for(int i = 1; i <= rowsCount - 1; i++) {

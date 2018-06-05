@@ -47,7 +47,7 @@ public class US8StepsDef {
         openButton.click();
     }
 
-    @Then("^the page sub title should be \"([^\"]*)\" - USSeven$")
+    @Then("^the page sub title should be \"([^\"]*)\" - US8$")
     public void thePageSubTitleShouldBeUSSeven(String arg0) throws Throwable {
         TestCase.assertEquals(driver.findElement(By.xpath("//h2")).getText(),arg0);
     }

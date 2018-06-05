@@ -6,7 +6,7 @@ Feature: Access to Contact Orchestrator Solution's (COS) Resolve Conflicts Page
   Scenario: Click on resolve conflicts
     Given the user is on the COS landing page US8
     When the user clicks on the "Resolve conflicts" button located bottom of the page title
-    Then the page sub title should be "CONTACT CONFLICTS" - USSeven
+    Then the page sub title should be "CONTACT CONFLICTS" - US8
 
 
   Scenario: Return to COS landing page from the resolve conflicts page
