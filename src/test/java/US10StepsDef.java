@@ -89,6 +89,6 @@ public class US10StepsDef {
 
     @Then("^the browser should download a csv file with the contacts list free of duplicates containing \"([^\"]*)\" on the filename$")
     public void theBrowserShouldDownloadACsvFileWithTheContactsListFreeOfDuplicatesContainingOnTheFilename(String filename) throws Throwable {
-        // To be implemented - probably not possible because of the need to check the downloaded file
+        // To be implemented - probably not possible because of the need to check the downloaded file and its data
     }
 }

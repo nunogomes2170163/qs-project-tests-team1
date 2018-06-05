@@ -50,9 +50,9 @@ Feature: Resolve a detected conflict and merge the selected information in one c
   #  And the remove button on each one of the columns should not be displayed
 
   # This test is commented because when we click on the save button the PhantomJs web driver does not detect that the page changed
-  # and, consequently the conflicts are not resolved. After a deep analysis, using Chrome web driver, we detected that when the
-  # driver goes to the conflict page, the information of each contact are not displayed for unknown reason.
-  # Therefore, this test will be performed on the job "Perform manual testing" of the testing pipeline defined on the jenkins server.
+  # and, consequently the conflicts are not resolved. But, using Chrome web driver the test pass. Since on the jenkins server
+  # the tests must be run on a headless web driver, this test will be performed on the job "Perform manual testing" of the
+  # testing pipeline defined on the jenkins server.
   #Scenario: Resolve a contact conflict with two contacts
   #  Given the user is on the "RESOLVE SINGLE CONFLICT" of the users with GUIDs "d4f8d88d-afe1-4c63-821a-27as83d6bb49%7Cd4f8d88d-afe1-4c63-821a-278883d6bb49" US9
   #  When the user clicks on the save button

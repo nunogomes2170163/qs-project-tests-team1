@@ -72,6 +72,9 @@ public class US9StepsDef {
 
     @Given("^the user is on the \"([^\"]*)\" of the users with GUIDs \"([^\"]*)\" US9$")
     public void theUserIsOnResolveSingleConflictPage(String subTitle, String guids) {
+        // this must start on the resolve conflicts page because of the need to fill session variable with information
+        driver.get("http://35.190.213.163/qs-project-team1/resolve_conflicts.php");
+        WebDriverWait wait = new WebDriverWait(driver, 3);
         driver.get("http://35.190.213.163/qs-project-team1/resolve_single_conflict.php?guids=d4f8d88d-afe1-4c63-821a-27as83d6bb49|d4f8d88d-afe1-4c63-821a-278883d6bb49");
         assertEquals(driver.findElement(By.xpath("//h2")).getText(), subTitle);
         assertEquals(guids, driver.getCurrentUrl().split("guids=")[1]);
@@ -86,8 +89,9 @@ public class US9StepsDef {
 
     @Then("^the \"([^\"]*)\" screen should be displayed - US9$")
     public void theShowConflictsScreenShouldAppear(String subTitle) {
-        WebDriverWait wait = new WebDriverWait(driver, 3);
-        wait.until(ExpectedConditions.textToBePresentInElement(driver.findElement(By.xpath("//h2")), subTitle));
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h2")));
+        assertEquals(subTitle, driver.findElement(By.xpath("//h2")).getText());
     }
 
     @Given("^the user is on the single conflict page of the users with GUIDs \"([^\"]*)\" US9$")
@@ -146,6 +150,7 @@ public class US9StepsDef {
 
     @When("^the user clicks on the save button$")
     public void theUserSaves() {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         WebElement saveButton = driver.findElement(By.className("js-save-conflict"));
         assertEquals("Save", saveButton.getText());
         saveButton.click();
